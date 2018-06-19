@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">KITHAY</string>
+    <!-- validation Errors -->
+    <string name="err_name">The name field is required.</string>
+    <string name="err_email">There must be a valid email address.</string>
+    <string name="err_password">Password must be at least 6 characters.</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="google_maps_API_key">AIzaSyCsg3rC28XYgYs4j8Xslv7N0uVC7NqoJmM </string>
+</resources>

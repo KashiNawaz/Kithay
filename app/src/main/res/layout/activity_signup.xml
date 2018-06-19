@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2e3138"
+    tools:context="com.kithay.Signup">
+
+    <RelativeLayout
+
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
+        android:background="#2e3138"
+        android:elevation="4dp"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="30dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/etName"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#3d4047"
+                    android:layout_marginTop="16dp"
+                    android:padding="15dp"
+                    android:textColorHint="#b7b7b7"
+
+                    android:hint="Fullname"
+                    android:inputType="textEmailAddress" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/etEmail_signup"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#3d4047"
+                    android:layout_marginTop="10dp"
+                    android:padding="15dp"
+                    android:hint="Email"
+                    android:textColorHint="#b7b7b7"
+                    android:inputType="textEmailAddress" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/etphone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#3d4047"
+                    android:layout_marginTop="16dp"
+                    android:padding="15dp"
+                    android:textColorHint="#b7b7b7"
+                    android:hint="Phone No#"
+                    android:inputType="textEmailAddress" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/etPassword_signup"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#3d4047"
+                    android:layout_marginTop="10dp"
+                    android:padding="15dp"
+                    android:hint="Password"
+                    android:textColorHint="#b7b7b7"
+                    android:inputType="textFilter" />
+
+            </LinearLayout>
+            <Button
+                android:id="@+id/btnSignup"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="#ea4c89"
+                android:text="Register"
+                android:textAllCaps="false"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/txtSignin"
+                android:clickable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingTop="40dp"
+                android:textColor="#ffffff"
+                android:textSize="15sp"
+                android:text="Already registered? Login Me." />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
