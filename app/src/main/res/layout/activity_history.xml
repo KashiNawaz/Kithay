@@ -70,5 +70,17 @@
         android:layout_gravity="center"
         android:text="read"/>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnchkInternet"
+        android:layout_gravity="center"
+        android:text="Check Internent"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sendsms"
+        android:layout_gravity="center"
+        android:text="Send SMS"/>
 
 </LinearLayout>

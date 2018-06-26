@@ -94,6 +94,7 @@ public class DBController {
         database.close();
     }
 
+    //Check User Exists ?
     public boolean userExists(String email,String password){
         database = dbhelper.getReadableDatabase();
         String fetchuser = "Select email,password from " +DBhelper.TABLE_USER;
@@ -123,6 +124,34 @@ public class DBController {
 
     }
 
+    // Check Contact Number Exists ?
+
+    public boolean contactExists(String contact) {
+        SQLiteDatabase db = dbhelper.getReadableDatabase();
+        boolean exist=false;
+        String fetchContact = "Select phone_number from " + DBhelper.TABLE_CONTACTS;
+        Cursor cursor = db.rawQuery(fetchContact, null);
+        String a = "not found";
+        Log.d("received Contact", contact);
+        Log.d("Cursor count", String.valueOf(cursor.getCount()));
+        if (cursor.moveToFirst()) {
+            Log.d("Select ", " clause");
+            do {
+                a = cursor.getString(0);
+                Log.d("a ", a);
+                if (a.equals(contact)) {
+                    Log.d("Contact  If loop", a);
+                    exist= true;
+                    break;
+                }
+            }while (cursor.moveToNext());
+        } else {
+            exist= false;
+        }
+
+        return exist;
+    }
+
     //Get Single Contact
     public ContactBO getContact(int id) {
         database = dbhelper.getReadableDatabase();
@@ -148,7 +177,21 @@ public class DBController {
 
     }
 
-    //Get All Contacts
+
+    //Get Last History
+    public HistoryBO getLastHistory() {
+        database = dbhelper.getReadableDatabase();
+
+        String selectQuery = "SELECT  * FROM " + DBhelper.TABLE_HISTORY;
+        Cursor cursor = database.rawQuery(selectQuery, null);
+        //Cursor cursor = database.query(DBhelper.TABLE_HISTORY, DBhelper.History_columns, DBhelper.KEY_PH_NO + " = ?", new String[]{String.valueOf(id)}, null, null, null, null);
+        if (cursor != null)
+            cursor.moveToLast();
+        HistoryBO history = new HistoryBO(Integer.parseInt(cursor.getString(0)), cursor.getString(1), cursor.getString(2), cursor.getString(3), cursor.getString(4), cursor.getString(5), cursor.getString(6), cursor.getString(7), cursor.getString(8));
+
+        return history;
+    }
+        //Get All Contacts
     public ArrayList<ContactBO> getAllContacts() {
         ArrayList<ContactBO> contactlist = new ArrayList<ContactBO>();
 
@@ -170,6 +213,7 @@ public class DBController {
         }
         return contactlist;
     }
+
 
 
     //Get All History

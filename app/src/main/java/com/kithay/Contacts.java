@@ -61,12 +61,12 @@ public class Contacts extends AppCompatActivity {
             lvContacts.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
                     ContactBO  itemValue    = (ContactBO) lvContacts.getItemAtPosition(position);
                     Toast.makeText(getApplicationContext(),
                             "Position :"+position+"  ListItem : " +itemValue.getName()+" "+itemValue.getPhone() , Toast.LENGTH_LONG)
                             .show();
-
-
+                    mydb.addContact(itemValue);
 
                 }
             });

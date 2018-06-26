@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#25ae90"
+    android:background="#1ac9df"
     tools:context="com.kithay.Signin">
 
     <RelativeLayout
@@ -14,7 +14,7 @@
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:layout_marginTop="50dp"
-        android:background="#25ae90"
+        android:background="#1ac9df"
         android:elevation="4dp"
         android:orientation="vertical"
         android:padding="20dp">
@@ -50,7 +50,7 @@
                     android:layout_marginTop="16dp"
                     android:padding="15dp"
                     android:hint="Password"
-                    android:inputType="textFilter" />
+                    android:inputType="textPassword" />
 
             </LinearLayout>
             <Button
@@ -61,7 +61,7 @@
                 android:background="#edeef3"
                 android:text="LogIn"
                 android:textAllCaps="false"
-                android:textColor="#25ae90"
+                android:textColor="#1ac9df"
                 android:textSize="20sp" />
 
             <TextView
