@@ -22,6 +22,11 @@ public class HomeScreen extends AppCompatActivity implements View.OnClickListene
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
 
+        Intent intent = new Intent(this,LocationService.class);
+        startService(intent);
+
+//        startService(new Intent(this, LocationService.class));
+
         locationCard=(CardView) (findViewById(R.id.cardlocation));
         contactsCard=(CardView) (findViewById(R.id.cardaddcontact));
         historyCard=(CardView) (findViewById(R.id.cardhistory));
